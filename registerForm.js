@@ -25,7 +25,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 auth.useDeviceLanguage();
 export { auth, onAuthStateChanged, getFirestore, app, doc, getDoc, setDoc };
-var registerForm = document.getElementById('register');
+
 
 var newUserWelcome = document.querySelector('.newUserWelcome');
 onAuthStateChanged(auth, (user) => {
@@ -33,12 +33,14 @@ onAuthStateChanged(auth, (user) => {
         // User is signed in
         const displayName = user.displayName;
         newUserWelcome.innerHTML = `Welcome, ${displayName || 'User'}!`;
+
     } else {
         // User is signed out
         
         newUserWelcome.innerHTML = 'New Customer? <a href="signup.html">Register</a>'
     }
 })
+const registerForm = document.getElementById('register')
 registerForm.addEventListener('submit', (e) => {
     e.preventDefault(); // Prevent the form from submitting and refreshing the page
     var registerUsername = document.getElementById('registerUsername').value;
@@ -161,7 +163,7 @@ google.addEventListener('click', () => {
         await updateProfile(user, {
             displayName: username
         });
-        console.log(user);
+        // console.log(user);
         // ...
     }).catch((error) => {
         // Handle Errors here.
@@ -172,7 +174,7 @@ google.addEventListener('click', () => {
         // The AuthCredential type that was used.
         const credential = GoogleAuthProvider.credentialFromError(error);
         // ...
-        console.log(errorMessage);
+        alert("An error occured. Please try later.")
     });
 })
 
@@ -186,7 +188,7 @@ github.addEventListener('click', () => {
         
         // The signed-in user info.
         const user = result.user;
-        console.log(user);
+        // console.log(user);
         // IdP data available using getAdditionalUserInfo(result)
         // ...
     }).catch((error) => {
@@ -198,37 +200,36 @@ github.addEventListener('click', () => {
         // The AuthCredential type that was used.
         const credential = GithubAuthProvider.credentialFromError(error);
         // ...
-        console.log(errorMessage);
+        alert("An error occured. Please try later.")
     });
 })
 
-const facebook = document.querySelector('.facebook')
-.addEventListener('click', () => {
-    signInWithPopup(auth, Facebookprovider)
-    .then((result) => {
-        // The signed-in user info.
-        const user = result.user;
+// document.querySelector('.facebook')
+// .addEventListener('click', () => {
+//     signInWithPopup(auth, Facebookprovider)
+//     .then((result) => {
+//         // The signed-in user info.
+//         const user = result.user;
         
-        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-        const credential = FacebookAuthProvider.credentialFromResult(result);
-        const accessToken = credential.accessToken;
-        console.log(user);
-        // IdP data available using getAdditionalUserInfo(result)
-        // ...
-    })
-    .catch((error) => {
-        // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message
-        console.log(errorMessage)
-        // The email of the user's account used.
-        const email = error.customData.email;
-        // The AuthCredential type that was used.
-        const credential = FacebookAuthProvider.credentialFromError(error);
+//         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+//         const credential = FacebookAuthProvider.credentialFromResult(result);
+//         const accessToken = credential.accessToken;
+//         // IdP data available using getAdditionalUserInfo(result)
+//         // ...
+//     })
+//     .catch((error) => {
+//         // Handle Errors here.
+//         const errorCode = error.code;
+//         const errorMessage = error.message
+//         alert("An error occured. Please try later.")
+//         // The email of the user's account used.
+//         const email = error.customData.email;
+//         // The AuthCredential type that was used.
+//         const credential = FacebookAuthProvider.credentialFromError(error);
         
-        // ...
-    });
+//         // ...
+//     });
 
-})
+// })
 
-// signOut(auth)
+// signOut(aut h)

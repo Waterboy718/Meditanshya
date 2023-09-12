@@ -5,10 +5,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Poppins;
+    transition: background-color 0.5s ease-in; /* Smooth transition for background color */
 }
 
 body {
     overflow-y: hidden;
+    transition: background-color 0.5s ease-in  ; /* Smooth transition for background color */
 }
 
 .wrapper {
@@ -464,7 +466,7 @@ form input {
     padding: 12px 20px;
     margin-bottom: 10px;
     border-radius: 20px;
-    background-color: #e4e4e4;
+    background: #e4e4e4;
 }
 
 button {

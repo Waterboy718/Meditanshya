@@ -237,8 +237,16 @@ function changeElements(mode) {
         document.querySelectorAll('.terms').forEach(element => {
             element.style.color = '#838181';
         })
-        querySelectAllWithColorChange('.social-icons i', 'black');
-
+        querySelectAllWithColorChange('.social-icon', 'black');
+        document.querySelector('.wrapper').style.backgroundColor = '#fff';
+        document.querySelector('.wrapper h1').style.color = '#07001f';
+        document.querySelector('.member').style.color = '#636363';
+        document.querySelector('.terms label').style.color = '#636363';
+        document.querySelector('.member a').style.color = 'rgb(17, 107, 143)';
+        document.querySelector('.terms label a').style.color = 'rgb(17, 107, 143)';
+        // document.querySelectorAll('form input').forEach(element => {
+        //     element.style.background = '#e4e4e4';
+        // })
     } else {
         document.querySelector('body').style.backgroundColor = '#24252A';
         document.querySelector('nav').style.backgroundColor = 'transparent';
@@ -281,8 +289,19 @@ function changeElements(mode) {
         document.querySelectorAll('.terms').forEach(element => {
             element.style.color = '#909090';
         })
-        querySelectAllWithColorChange('.social-icons i', 'white')
-
+        querySelectAllWithColorChange('.social-icon', 'white');
+        document.querySelector('.wrapper').style.backgroundColor = '#333';
+        document.querySelector('.wrapper h1').style.color = 'white';
+        document.querySelector('.member').style.color = '#c4c1c1';
+        document.querySelector('.terms label').style.color = '#c4c1c1';
+        document.querySelector('.member a').style.color = 'rgb(26, 156, 207)';
+        document.querySelector('.terms label a').style.color = 'rgb(26, 156, 207)';
+        
+        // document.querySelectorAll('form input').forEach(element => {
+        //     element.style.background = 'rgba(228, 228, 228, 0.7)'
+        // })
+        
+    
     }
 }
 

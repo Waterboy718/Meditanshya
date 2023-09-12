@@ -9,22 +9,22 @@
 </head>
 <body>
     
-    <nav>
+    <nav style="background-color: transparent;">
         <ul class="logoContainer">
             <li class="logo"><!-- Wrap the logo link in a container -->
-                <a href="home.html">
+                <a href="home.html" id="logocontainer">
                     <!-- <i class="fa-solid fa-house-medical" style="color: white;font-size: 16px;"></i> -->
                     <span>M</span><span>e</span><span>d</span><span>i</span><span>t</span><span>a</span><span>n</span><span>s</span><span>h</span><span style="opacity: 1;">y</span><span>a</span>
-                    <!-- <span style="color: white;">Example</span> -->
+                    <!-- <span>Example</span> -->
                 </a>
             </li>
         </ul>
         
         <ul class="menu">
-            <li class="item"><a href="#" id="home">Home</a></li>
-            <li class="item"><a href="#" id="shop">Shop</span></a></li>
-            <li class="item"><a href="#" id="services">Services</a></li>
-            <li class="item"><a href="#" id="aboutus">About Us</a></li>
+            <li class="item light"><a href="home.html" id="home">Home</a></li>
+            <li class="item light" ><a href="#" id="shop">Shop</span></a></li>
+            <li class="item light" ><a href="#" id="services">Services</a></li>
+            <li class="item light "><a href="#" id="aboutus">About Us</a></li>
         </ul>
         
         <ul class="iconTable">
@@ -36,38 +36,48 @@
                 </a>
             </li>
        </ul> 
-       <div class="menu-account">
-        <label style="font-size: 15px;">New Customer? <a href="login.html">Register</a></label>
-        <hr>
-        <div class="menuItemsContainer">
-           <i class="fa-solid fa-gear icons" style="font-size: 15px;"></i>
-            <label class="menuItems">Account Settings</label> 
+        
+        <div class="menu-account">
+            <label class="newUserWelcome" style="font-size: 15px;">Loading... <a href="login.html"></a></label>
+            <div id="hr"></div>
+            <div class="menuItemsContainer">
+                <i class="fa-solid fa-gear icons" style="font-size: 15px;"></i>
+                <label class="menuItems">Account Settings</label> 
+            </div>
+            <br>
+            <div class="menuItemsContainer">
+                <i class="fa-solid fa-box icons"></i>
+                <label class="menuItems">Orders</label> 
+            </div>
+            <br>
+            <div class="menuItemsContainer"> 
+                <i class="fa-regular fa-heart icons"></i>
+                <label class="menuItems">Wishlist</label> 
+            </div>
+            <br>
+            <div class="menuItemsContainer">
+                <i class="fa-solid fa-phone icons"></i>
+                <label class="menuItems">Contact Us</label> 
+            </div>
+            <br>
+            <div class="menuItemsContainer">
+                <i class="fa-regular fa-credit-card icons"></i>
+                <label class="menuItems">Coupons And Offers</label> 
+            </div>
+            <br>
+            <div class="menuItemsContainer " style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;" id="modeContainer">
+                <i class="fa-solid fa-moon icons" style="position: relative;left: 15px;"></i>
+                <label class="menuItems" id="modeLabel">Dark Mode</label>
+            </div>
+            
         </div>
-        <br>
-        <div class="menuItemsContainer">
-           <i class="fa-solid fa-box icons"></i>
-            <label class="menuItems">Orders</label> 
-        </div>
-        <br>
-        <div class="menuItemsContainer"> 
-            <i class="fa-regular fa-heart icons"></i>
-            <label class="menuItems">Wishlist</label> 
-        </div>
-        <br>
-        <div class="menuItemsContainer">
-            <i class="fa-solid fa-phone icons"></i>
-            <label class="menuItems">Contact Us</label> 
-        </div>
-        <br>
-        <div class="menuItemsContainer" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
-            <i class="fa-regular fa-credit-card icons"></i>
-            <label class="menuItems">Coupons And Offers</label> 
-        </div>
-
-   </div>
+        
+        
     </nav>
     
     
-   <script src="home.js"></script> 
+   
 </body>
+<script src="home.js" type="module"></script> 
+   <script src="homeUser.js" type="module"></script>
 </html>
