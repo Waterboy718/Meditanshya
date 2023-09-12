@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Borel&family=Nunito&family=Poppins:wght@400;500;600&family=Raleway&family=Ysabeau+Infant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Borel&family=Nunito&family=Outfit&family=Poppins:wght@400;500;600&family=Raleway&family=Work+Sans&family=Ysabeau+Infant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Borel&family=Nunito&family=Outfit&family=Poppins:wght@400;500;600&family=Questrial&family=Raleway&family=Work+Sans&family=Ysabeau+Infant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Borel&family=Nunito&family=Poppins:wght@400;500;600&family=Raleway&family=Ysabeau+Infant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Borel&family=Nunito&family=Outfit&family=Patua+One&family=Poppins:wght@400;500;600&family=Questrial&family=Raleway&family=Work+Sans&family=Ysabeau+Infant&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Borel&family=Nunito&family=Poppins:wght@400;500;600&family=Raleway&family=Ysabeau+Infant&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav .menu {
+    cursor: pointer !important;
+}
+
+body {
+    background-color: #24252A;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 3%;
+    overflow-x: hidden;
+}
+
+.menu {
+    font-family: Poppins;
+}
+
+.logo {
+    font-family: Borel;
+}
+
+
+
+.menu li a {
+    cursor: pointer;
+}
+
+nav {
+    background: transparent;
+    height: 90px;
+    border-bottom: 0.2px solid #999;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+.menu li {
+    font-size: 16px;
+    padding-left: 20px; padding-right: 20px;
+}
+.logo a {
+    font-size: 20px;
+}
+
+
+/* Mobile menu */
+.logo a span {
+    position: relative;
+    top: -3px;
+}
+
+.logo a i {
+    position: relative;
+    top: 9.5px;
+}
+
+
+
+.logoContainer {
+    cursor: pointer;
+    position: relative;
+    top: 34px;
+    color: #383838;
+    padding-left: 50px;
+}
+
+.logo a {
+    font-size: 23px;
+}
+
+.iconTable {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    top: -12.5px;
+}
+
+#userIcon {
+    position: absolute;
+    right: 150px;
+}
+
+#cartIcon {
+    position: absolute;
+    right: 110px;
+}
+
+#settingsIcon {
+    position: absolute;
+    top: -1px;
+    right: 70px;
+}
+
+ul  {
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    top: 35px;
+}
+
+
+/* #active {
+    border-radius: 2px;
+    padding: 2px 4px;
+    border-bottom: 2px solid rgba(240, 204, 204, 0.3);
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    width: 55.7188px;
+    left: 71.7px;
+} */
+
+
+/* Your existing CSS styles */
+
+/* Your existing CSS styles */
+
+.menu li {
+    transition: all 0.1s ease-in-out;
+    
+}
+
+.menu li:active {
+    transform: translateY(2px);
+}
+
+.menu li a:hover {
+    transition: all 0.1s ease-in-out;
+    color: #aca;
+}
+
+.iconTable li a:hover {
+    color: lightblue;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+.menu-account {
+    width: 200px;
+    height: 252px;
+    z-index: 100;
+    background-color: white;
+    position: absolute;
+    right: 57px;
+    top: 68px;
+    border-radius: 10px;
+    display: none;
+}
+
+.menu-account label {
+    color: #000;
+
+    font-family: Work Sans;
+    font-weight:500;
+    word-spacing: 0;
+    line-height: 45px;
+    position: relative;
+    left: 10px;
+}
+
+.menu-account label a {
+    color: blue;
+}
+
+.menuItems {
+    font-size: 13.5px;
+}
+
+.icons {
+    position: relative;
+    left: 13px;
+    top: 1.5px;
+}
+
+br {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: -5px; /* change this to whatever height you want it */
+}
+
+.menuItemsContainer {
+    cursor: pointer;
+}
+
+.menuItemsContainer * {
+    cursor: pointer;
+}
+
+.menuItemsContainer:hover {
+    background: #f5f4f4;
+}
+
+.menuItemsContainer label {
+    position: relative;
+    left: 20px;
+    /* color: #d1cfcf; */
+}
+

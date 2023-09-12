@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <script src="https://kit.fontawesome.com/62fa5986be.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav style="background-color: transparent;">
+        <ul class="logoContainer">
+            <li class="logo"><!-- Wrap the logo link in a container -->
+                <a href="home.html" id="logocontainer">
+                    <!-- <i class="fa-solid fa-house-medical" style="color: white;font-size: 16px;"></i> -->
+                    <span>M</span><span>e</span><span>d</span><span>i</span><span>t</span><span>a</span><span>n</span><span>s</span><span>h</span><span style="opacity: 1;">y</span><span>a</span>
+                    <!-- <span>Example</span> -->
+                </a>
+            </li>
+        </ul>
+        
+        <ul class="menu">
+            <li class="item light"><a href="home.html" id="home">Home</a></li>
+            <li class="item light" ><a href="#" id="shop">Shop</span></a></li>
+            <li class="item light" ><a href="#" id="services">Services</a></li>
+            <li class="item light "><a href="#" id="aboutus">About Us</a></li>
+        </ul>
+        
+        <ul class="iconTable">
+            <li style="list-style-type: none;">
+                <a href="#">
+                    <i class="fa-solid fa-user" style="color: white;cursor: pointer;font-size: 1.2rem;" id="userIcon" title="Account"></i> 
+                    <i class="fa-solid fa-cart-shopping" style="color: white;cursor: pointer;font-size: 1.2rem;" id="cartIcon" title="Your Cart"></i>
+                    <i class="fa-solid fa-heart" style="color: white;cursor: pointer;font-size: 1.25rem;" id="settingsIcon" title="Wishlist"></i>
+                </a>
+            </li>
+       </ul> 
+
+       <div class="menu-account">
+            <label class="newUserWelcome" style="font-size: 15px;">Loading... <a href="login.html"></a></label>
+            <div id="hr"></div>
+            <div class="menuItemsContainer">
+               <i class="fa-solid fa-gear icons" style="font-size: 15px;"></i>
+                <label class="menuItems">Account Settings</label> 
+            </div>
+            <br>
+            <div class="menuItemsContainer">
+               <i class="fa-solid fa-box icons"></i>
+                <label class="menuItems">Orders</label> 
+            </div>
+            <br>
+            <div class="menuItemsContainer"> 
+                <i class="fa-regular fa-heart icons"></i>
+                <label class="menuItems">Wishlist</label> 
+            </div>
+            <br>
+            <div class="menuItemsContainer">
+                <i class="fa-solid fa-phone icons"></i>
+                <label class="menuItems">Contact Us</label> 
+            </div>
+            <br>
+            <div class="menuItemsContainer">
+                <i class="fa-regular fa-credit-card icons"></i>
+                <label class="menuItems">Coupons And Offers</label> 
+            </div>
+            <br>
+            <div class="menuItemsContainer " style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;" id="modeContainer">
+                <i class="fa-solid fa-moon icons" style="position: relative;left: 15px;"></i>
+                <label class="menuItems" id="modeLabel">Dark Mode</label>
+            </div>
+
+       </div>
+       
+
+    </nav>
+    <div class="wrapper">
+        <h1>Sign Up</h1>
+        <form action="" id="register">
+            <input type="text" placeholder="Username" id="registerUsername" autocomplete="off">
+            <input type="text" placeholder="Email" id="registerEmail" autocomplete="off">
+            <input type="text" placeholder="Password" id="registerPassword" autocomplete="off">
+            <input type="text" placeholder="Re-Enter Password" id="registerConfirmPassword" autocomplete="off">
+        </form>
+        <div class="terms">
+            <input type="checkbox" id="checkbox" required>
+            <label for="checkbox">I agree to the <a href="#">Terms & Conditions.</a></label>
+        </div>
+        <button type="submit" form="register" >Register</button>
+        <div class="line-with-or">
+            <div class="line"></div>
+             <div id="or">OR</div>
+             <div class="line"></div> 
+         </div>
+         <div class="social-icons">
+             <div class="social-icon google"><i class="fa fa-google" style="color: black !important;"></i></div>
+             <div class="social-icon github"><i class="fa fa-github"></i></div>
+             <div class="social-icon facebook"><i class="fa fa-facebook"></i></div>
+         </div>
+        <div class="member">
+            Already a member? <a href="./login.html">
+                Login
+            </a> 
+        </div>
+    </div>
+    <!-- <button id="logout">LOGOUT</button> -->
+    
+</body>
+<script src="signup.js" type="module"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+<script src="registerForm.js" type="module"></script>
+</html>
