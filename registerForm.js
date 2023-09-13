@@ -3,6 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebas
 import { getAuth, createUserWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
 import { getFirestore, collection, addDoc, doc, setDoc, deleteDoc, getDoc } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore.js';
 import { GoogleAuthProvider, signInWithPopup, GithubAuthProvider, FacebookAuthProvider } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
+import { changeBody } from "./signup.js";
 
 const Googleprovider = new GoogleAuthProvider();
 const Githubprovider = new GithubAuthProvider();
@@ -63,7 +64,7 @@ registerForm.addEventListener('submit', (e) => {
 
             // Add the user's theme and user ID to Firestore
             await addThemeAndUserIDToFirestore(userID, 'light', registerUsername, registerEmail, registerPassword); // Change 'light' to the actual theme value
-            alert('registered! :)')
+            changeBody();
         })
         .catch((err) => {
             const errorCode = err.code;
@@ -158,11 +159,16 @@ google.addEventListener('click', () => {
         const firstName = displayNameParts[0];
         // You can use the first name as the username
         const username = firstName;
-
+        
+        changeBody();
         // Update the user's display name and username
         await updateProfile(user, {
             displayName: username
         });
+        await addThemeAndUserIDToFirestore(userID, 'light', firstName, user.email, user.password);
+        document.querySelectorAll('.menuItemsContainer').forEach(element => {
+            element.classList.toggle('lightmenuItemsContainer');
+        })
         // console.log(user);
         // ...
     }).catch((error) => {
@@ -190,6 +196,10 @@ github.addEventListener('click', () => {
         const user = result.user;
         // console.log(user);
         // IdP data available using getAdditionalUserInfo(result)
+        changeBody();
+        document.querySelectorAll('.menuItemsContainer').forEach(element => {
+            element.classList.toggle('lightmenuItemsContainer');
+        })
         // ...
     }).catch((error) => {
         // Handle Errors here.
@@ -232,4 +242,4 @@ github.addEventListener('click', () => {
 
 // })
 
-// signOut(aut h)
+// signOut(auth)

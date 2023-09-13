@@ -1,4 +1,4 @@
-import { auth, onAuthStateChanged, app, doc, getFirestore, getDoc, setDoc } from './homeUser.js';
+import { auth, onAuthStateChanged, app, doc, getFirestore, getDoc, setDoc, signOut } from './homeUser.js';
 var items = document.querySelectorAll('.item');
 var active_tab = document.querySelector('.active-tab');
 items.forEach((element) => {
@@ -20,7 +20,7 @@ var delays = [200, 200, 200, 200, 100, 100, 100, 100, 100, 100, 100];
 
 const db = getFirestore(app);
 
-var currentMode = undefined;
+var currentMode;
 var x = document.getElementById('login');
 var y = document.getElementById('register');
 var z = document.getElementById('btn');
@@ -34,11 +34,7 @@ var delays = [200, 200, 200, 200, 100, 100, 100, 100, 100, 100, 100];
 var userIcon = document.getElementById('userIcon');
 var menu_account = document.querySelector('.menu-account');
 let menuTimeout, menuaccount_open;
-if(currentMode === 'light') {
-    changeElements('dark')
-} else {
-    changeElements('light')
-}
+
 window.onload = () => {
     onAuthStateChanged(auth, async (user) => {
         if (user) {
@@ -398,3 +394,16 @@ menu_account.addEventListener('mouseout', (e) => {
     }
 });
 
+userIcon.addEventListener('click', () => {
+    setTimeout(() => {
+        const user = auth.currentUser;
+        if(!user) {
+            location.href = 'signup.html'
+        }  else {
+
+        }
+    }, 1000);
+    
+})
+
+// signOut(auth);

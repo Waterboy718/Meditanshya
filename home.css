@@ -10,7 +10,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    transition: background-color 0.5s ease-in  ; /* Smooth transition for background color */
 }
 
 html {
@@ -252,3 +251,11 @@ br {
     font-family: Work Sans;
 }
 
+@media screen and (max-width: 718px) {
+    .menu {
+        display: none
+    }
+    .logoContainer li a span {
+        font-size: 20px;
+    }
+}

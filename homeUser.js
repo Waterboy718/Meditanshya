@@ -20,7 +20,7 @@ const app = initializeApp(firebaseConfig);
 // Initialize Firebase Authentication and get a reference to the service
 const auth = getAuth(app);
 auth.useDeviceLanguage();
-export { auth, onAuthStateChanged, app, doc, getFirestore, getDoc, setDoc };
+export { auth, onAuthStateChanged, app, doc, getFirestore, getDoc, setDoc, signOut };
 var newUserWelcome = document.querySelector('.newUserWelcome');
 onAuthStateChanged(auth, (user) => {
     if (user) {

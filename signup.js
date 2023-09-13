@@ -16,11 +16,11 @@ var userIcon = document.getElementById('userIcon');
 var menu_account = document.querySelector('.menu-account');
 let menuTimeout, menuaccount_open;
 menuaccount_open = false;
-if(currentMode === 'light') {
-    changeElements('dark')
-} else {
-    changeElements('light')
-}
+// if(currentMode === 'light') {
+//     changeElements('dark')
+// } else {
+//     changeElements('light')
+// }
 window.onload = async () => {
     onAuthStateChanged(auth, async (user) => {
         if (user) {
@@ -40,10 +40,12 @@ window.onload = async () => {
                         updateModeLabel(); // Update the label and icon
                         addClass();
                     } else {
-
+                        console.log('true')
                     }
                 })
-                .catch((error) => {}
+                .catch((error) => {
+                    console.log(error.message);
+                }
                 );
         } else {
             currentMode = 'light';
@@ -81,28 +83,7 @@ function updateModeLabel() {
     }
 }
 
-function register() {
-    x.style.left = '-400px';
-    y.style.left = '50px';
-    z.style.left = '110px';
-    document.querySelectorAll('#login input').forEach(element => {
-       setTimeout(() => {
-            element.value = '';
-       }, 50);
-    });
-}
 
-function login() {
-    x.style.left = '50px';
-    y.style.left = '450px';
-    z.style.left = '0';
-    document.querySelectorAll('#register input').forEach(element => {
-        setTimeout(() => {
-            element.value = '';
-        }, 50);
-        
-    });
-}
 
 
 items.forEach((element) => {
@@ -348,12 +329,12 @@ async function changeMode() {
         userIconDefaultColor = 'black';
         userIconColor = '#5a5959';
         localStorage.setItem('currentMode', 'light')
-        document.querySelectorAll('.menuItemsContainer').forEach(element => {
-            element.classList.toggle('darkmenuItemsContainer');
-        })
-        document.querySelectorAll('.menuItemsContainer').forEach(element => {
-            element.classList.toggle('lightmenuItemsContainer');
-        })
+        // document.querySelectorAll('.menuItemsContainer').forEach(element => {
+        //     element.classList.toggle('darkmenuItemsContainer');
+        // })
+        // document.querySelectorAll('.menuItemsContainer').forEach(element => {
+        //     element.classList.toggle('lightmenuItemsContainer');
+        // })
         document.querySelectorAll('.item').forEach(element => {
             element.classList.toggle('dark');
         })
@@ -421,4 +402,27 @@ menu_account.addEventListener('mouseout', (e) => {
         }, 0); // Adjust the delay (in milliseconds) as needed
     }
 });
+
+// Add this JavaScript code to your signup.js file
+const registerForm = document.getElementById('register');
+const blurBackground = document.querySelector('section');
+
+// Function to toggle the blur effect
+function toggleBlur() {
+    blurBackground.style.filter = 'opacity(0.5)';
+    blurBackground.style.filter = 'blur(5px)';
+}
+
+// Add an event listener to the form submit button or any other trigger
+function changeBody() {
+    var registerSuccesful = document.querySelector('.succesful-register')
+    setTimeout(() => {
+       toggleBlur();
+        registerSuccesful.style.display = 'block';
+        blurBackground.style.pointerEvents = 'none'; 
+    }, 750);
+    
+
+}
+export { changeBody }
 
