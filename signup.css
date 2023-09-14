@@ -684,3 +684,31 @@ input:focus {
     filter:opacity(0.5);
     filter: blur(5px);
 } */
+
+@media screen and (max-width: 452px) {
+    #userIcon {
+        position: absolute;
+        right: 100px;
+    }
+    
+    #cartIcon {
+        position: absolute;
+        right: 60px;
+    }
+    
+    #settingsIcon {
+        position: absolute;
+        top: -1px;
+        right: 20px;
+    }
+
+    .logoContainer {
+        padding-left: 25px;
+    }
+
+    .wrapper {
+        transform: scale(0.9);
+        
+    }
+
+}

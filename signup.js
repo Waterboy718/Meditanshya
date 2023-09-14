@@ -1,6 +1,7 @@
 import { auth, onAuthStateChanged, app, doc, getFirestore, getDoc, setDoc } from './registerForm.js';
 const db = getFirestore(app);
-
+var userIconColor;
+var userIconDefaultColor;
 var currentMode = undefined;
 var x = document.getElementById('login');
 var y = document.getElementById('register');
@@ -56,6 +57,11 @@ window.onload = async () => {
             addClass();
         }
     });
+    if(currentMode === 'light') {
+        modeLabel.innerHTML = 'Dark Mode';
+    } else {
+        modeLabel.innerHTML = 'Light Mode';
+    }
 }
 
 
@@ -352,8 +358,7 @@ async function changeMode() {
         }
     }
 }
-var userIconColor;
-var userIconDefaultColor;
+
 var modeLabel = document.getElementById('modeLabel');
 if(currentMode === 'light') {
     modeLabel.innerHTML = 'Dark Mode';
