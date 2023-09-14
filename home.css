@@ -259,3 +259,61 @@ br {
         font-size: 20px;
     }
 }
+
+@media screen and (max-width: 452px) {
+    #userIcon {
+        position: absolute;
+        right: 100px;
+    }
+    
+    #cartIcon {
+        position: absolute;
+        right: 60px;
+    }
+    
+    #settingsIcon {
+        position: absolute;
+        top: -1px;
+        right: 20px;
+    }
+
+    .logoContainer {
+        padding-left: 25px;
+    }
+
+    .wrapper {
+        transform: scale(0.9);
+        
+    }
+    .menu-account {
+        right: 10px;
+    }
+
+}       
+
+
+#menuIcon {
+    display: none;
+    position: absolute;
+    right: 60px;
+    top: -1.5px;
+}
+
+@media screen and (max-width: 450px) {
+    #cartIcon {
+        display: none;
+    }
+
+    #settingsIcon {
+        display: none;
+    }
+
+    #menuIcon {
+        display: block;
+    }
+}
+
+.iconTable i {
+    color: white;
+    cursor: pointer;
+}
